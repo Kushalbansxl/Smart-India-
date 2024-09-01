@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buyer's Page</title>
+    <link rel="stylesheet" href="buyerPage.css">
+    <link rel="stylesheet" href="chatbot.css">
+</head>
+<body>
+    <div class="mainPage">
+        <div class="titleContainer">
+            <div class="titleBar">
+                <img src="https://cdn-icons-png.flaticon.com/512/843/843349.png" alt="Logo" class="logo">
+                <span class="line">Krishi</span>
+                <span class="line">Saarthi</span>
+                <a href="requirements.html" class="requirementsButton">Requirements</a>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="content-inner">
+                <h2 class="sectionHeading">Buyer's Section</h2>
+
+                <!-- Crop Requirement Form -->
+                <form class="requirementForm" id="requirementForm">
+                    <h3>Specify Your Crop Requirement</h3>
+                    <div class="formRow">
+                        <div class="formGroup">
+                            <label for="cropName">Crop Name:</label>
+                            <input type="text" id="cropName" name="cropName">
+                        </div>
+                        <div class="formGroup">
+                            <label for="description">Description:</label>
+                            <textarea id="description" name="description"></textarea>
+                        </div>
+                    </div>
+                    <div class="formRow">
+                        <div class="formGroup">
+                            <label for="type">Type of Crop:</label>
+                            <input type="text" id="type" name="type">
+                        </div>
+                        <div class="formGroup">
+                            <label for="deliveryDate">Delivery Date:</label>
+                            <input type="date" id="deliveryDate" name="deliveryDate">
+                        </div>
+                    </div>
+                    <div class="formRow">
+                        <div class="formGroup">
+                            <label for="quantity">Quantity Needed:</label>
+                            <input type="number" id="quantity" name="quantity">
+                        </div>
+                        <div class="formGroup">
+                            <label for="location">Delivery Location:</label>
+                            <input type="text" id="location" name="location">
+                        </div>
+                    </div>
+                    <button type="button" class="submitBtn" id="submitBtn">Submit</button>
+                </form>
+
+                <!-- Available Crops Section -->
+                <div class="availableCrops">
+                    <h2>See the Available Crops Listed By Farmers</h2>
+                    <a href="listings.html" class="viewListingsButton">View Listings</a>
+                </div>
+            </div>
+        </div>
+        <!-- Popup chat window -->
+
+    <!-- chat open -->
+    <!-- Popup chat window -->
+
+    <!-- chat open -->
+    <div class="chat-bar-open" id="chat-open">
+        <button
+          id="chat-open-button"
+          type="button"
+          class="collapsible close"
+          onclick="chatOpen()"
+        >
+          <img src="images/Sparrow Bird.png" alt="Sparrow Bird image" />
+        </button>
+      </div>
+  
+      <!-- chat close -->
+      <div class="chat-bar-close" id="chat-close">
+        <button
+          id="chat-close-button"
+          type="button"
+          class="collapsible close"
+          onclick="chatClose()"
+        >
+          <i class="material-icons-outlined"> close </i>
+        </button>
+      </div>
+  
+      <!-- chat-window 1 -->
+      <div class="chat-window" id="chat-window1">
+        <div class="hi-there">
+          <p class="p1">Hi There</p>
+          <br />
+          <p class="p2">Hello Ask Us Anythig,Share Your<br />Feedback.</p>
+        </div>
+        <div class="start-conversation">
+          <h1>Start a Conversation</h1>
+          <br />
+          <p>The team typically replies in few minutes.</p>
+          <button
+            class="new-conversation"
+            type="button"
+            onclick="openConversation()"
+          >
+            <span>New Conversation</span
+            ><i class="material-icons-outlined"> send </i>
+          </button>
+        </div>
+      </div>
+  
+      <!-- chat chat-window 2 -->
+      <div class="chat-window2" id="chat-window2">
+        <div class="message-box" id="messageBox">
+          <div class="hi-there">
+            <p class="p1">नमस्ते, मैं आपकी क्या मदद कर सकता हूँ?</p>
+            <br />
+            <p class="p2">The team typically replies in few minutes.</p>
+          </div>
+          <div class="first-chat">
+            <p>Krishi Saarthi is on their way to win.</p>
+            <div class="arrow"></div>
+          </div>
+          <div class="second-chat">
+            <div class="circle"></div>
+            <p>Saarthi won the hackathon guys!</p>
+            </p>
+            <div class="arrow"></div>
+          </div>
+        </div>
+        <div class="input-box">
+          <div class="surveysparrow">
+            <img src="images/sparrow favicon.png" />
+            <p>we run on Krishi Saarthi</p>
+          </div>
+          <div class="write-reply">
+            <input
+              class="inputText"
+              type="text"
+              id="textInput"
+              placeholder="Write a reply..."
+            />
+          </div>
+          <div class="send-button">
+            <button
+              type="submit"
+              class="send-message"
+              id="send"
+              onclick="userResponse()"
+            >
+              <i class="material-icons-outlined"> send </i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+        <!-- Footer Section -->
+        <div class="footer">
+            All Rights Reserved &copy; 2024
+        </div>
+    </div>
+    <script src ="chatbot.js"></script>
+    <script src="script1.js"></script>
+</body>
+</html>

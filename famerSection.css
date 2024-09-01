@@ -1,0 +1,202 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background-attachment: fixed;
+}
+
+/* Main Page */
+.mainPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background-image: url('https://images.pexels.com/photos/1334312/pexels-photo-1334312.jpeg?cs=srgb&dl=pexels-designstrive-1334312.jpg&fm=jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Fixes the background image */
+}
+
+/* Header Section */
+.titleContainer {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.744);
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.titleBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.logo {
+    width: 60px;
+}
+
+.line {
+    color: #4A4A4A;
+    font-size: 18px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.listingsButton {
+    padding: 10px 20px;
+    background-color: #4A4A4A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.listingsButton:hover {
+    background-color: #333333;
+}
+
+/* Content Section */
+.content {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 30px;
+    padding-top: 100px; /* Adjust for fixed header */
+    padding-bottom: 60px; /* Add padding at the bottom to avoid overlap with sticky footer */
+}
+
+.content-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.sectionHeading {
+    font-size: 48px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Horizontal Form Styles */
+.queryForm {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 900px; /* Restrict max width */
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.queryForm h3 {
+    font-size: 24px;
+    color: #4A4A4A;
+    margin-bottom: 15px;
+}
+
+.formRow {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap if needed */
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.formGroup label {
+    margin-bottom: 5px;
+    color: #4A4A4A;
+}
+
+.formGroup input,
+.formGroup textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.queryForm .submitBtn {
+    padding: 10px 20px;
+    background-color: #4A4A4A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-top: 10px;
+}
+
+.queryForm .submitBtn:hover {
+    background-color: #333333;
+}
+
+/* View Buyer Requirements Section */
+.viewRequirements {
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.viewRequirements h3 {
+    font-size: 24px;
+    color: #4A4A4A;
+    margin-bottom: 30px;
+}
+
+.viewRequirementsButton {
+    padding: 10px 20px;
+    background-color: #4A4A4A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.viewRequirementsButton:hover {
+    background-color: #333333;
+}
+
+/* Footer Section */
+.footer {
+    position: sticky; /* Make footer sticky */
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #4A4A4A;
+    font-size: 14px;
+    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.1);
+}

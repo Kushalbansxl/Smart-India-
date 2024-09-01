@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buyer Login</title>
+    <link rel="stylesheet" href="Buyer.css" />
+    <link rel="stylesheet" href="chatbot.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="form-header">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/8/84/Government_of_India_logo.svg"
+          alt="Logo"
+        />
+        <h1>Buyer Login</h1>
+      </div>
+      <form action="buyerPage.html">
+        <div class="form-group">
+          <label for="Phone">Buyer Name:<label>
+          <input
+            type="tel"
+            id="Phone"
+            name="Phone"
+            placeholder="Buyer Name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+        </div>
+        
+        <button type="submit" class="submit-btn">Login</button>
+        
+      </form>
+      <div class="register">
+        <p>Not a member yet?</p>
+        <a href="farmerregistration.html">Register Here</a>
+      </div>
+    </div>
+    
+    <!-- Popup chat window -->
+
+    <!-- chat open -->
+    <!-- Popup chat window -->
+
+    <!-- chat open -->
+    <div class="chat-bar-open" id="chat-open">
+      <button
+        id="chat-open-button"
+        type="button"
+        class="collapsible close"
+        onclick="chatOpen()"
+      >
+        <img src="images/Sparrow Bird.png" alt="Sparrow Bird image" />
+      </button>
+    </div>
+
+    <!-- chat close -->
+    <div class="chat-bar-close" id="chat-close">
+      <button
+        id="chat-close-button"
+        type="button"
+        class="collapsible close"
+        onclick="chatClose()"
+      >
+        <i class="material-icons-outlined"> close </i>
+      </button>
+    </div>
+
+    <!-- chat-window 1 -->
+    <div class="chat-window" id="chat-window1">
+      <div class="hi-there">
+        <p class="p1">Hi There</p>
+        <br />
+        <p class="p2">Hello Ask Us Anythig,Share Your<br />Feedback.</p>
+      </div>
+      <div class="start-conversation">
+        <h1>Start a Conversation</h1>
+        <br />
+        <p>The team typically replies in few minutes.</p>
+        <button
+          class="new-conversation"
+          type="button"
+          onclick="openConversation()"
+        >
+          <span>New Conversation</span
+          ><i class="material-icons-outlined"> send </i>
+        </button>
+      </div>
+    </div>
+
+    <!-- chat chat-window 2 -->
+    <div class="chat-window2" id="chat-window2">
+      <div class="message-box" id="messageBox">
+        <div class="hi-there">
+          <p class="p1">नमस्ते, मैं आपकी क्या मदद कर सकता हूँ?</p>
+          <br />
+          <p class="p2">The team typically replies in few minutes.</p>
+        </div>
+        <div class="first-chat">
+          <p>Krishi Saarthi is on their way to win.</p>
+          <div class="arrow"></div>
+        </div>
+        <div class="second-chat">
+          <div class="circle"></div>
+          <p>Saarthi won the hackathon guys!</p>
+          </p>
+          <div class="arrow"></div>
+        </div>
+      </div>
+      <div class="input-box">
+        <div class="surveysparrow">
+          <img src="images/sparrow favicon.png" />
+          <p>we run on Krishi Saarthi</p>
+        </div>
+        <div class="write-reply">
+          <input
+            class="inputText"
+            type="text"
+            id="textInput"
+            placeholder="Write a reply..."
+          />
+        </div>
+        <div class="send-button">
+          <button
+            type="submit"
+            class="send-message"
+            id="send"
+            onclick="userResponse()"
+          >
+            <i class="material-icons-outlined"> send </i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="chatbot.js"></script>
+  </body>
+</html>

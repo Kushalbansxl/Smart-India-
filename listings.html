@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Listings</title>
+    <link rel="stylesheet" href="listing.css">
+</head>
+<body>
+    <div class="mainPage">
+        <div class="titleContainer">
+            <div class="titleBar">
+                <img src="logo.png" alt="Logo" class="logo">
+                <span class="line">Krishi</span>
+                <span class="line">Saarthi</span>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="content-inner">
+                <h2 class="sectionHeading">Crop Listings</h2>
+                <div class="listingsContainer" id="listingsContainer">
+                    <!-- Crop listings will be dynamically added here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="footer">
+            All Rights Reserved &copy; 2024
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to dynamically populate crop listings from local storage
+        window.onload = function() {
+            let crops = localStorage.getItem('crops');
+            crops = crops ? JSON.parse(crops) : [];
+            const listingsContainer = document.getElementById('listingsContainer');
+
+            if (crops.length === 0) {
+                listingsContainer.innerHTML = '<p>No listings available.</p>';
+            } else {
+                crops.forEach(crop => {
+                    const cropDiv = document.createElement('div');
+                    cropDiv.className = 'listingItem';
+                    cropDiv.innerHTML = `
+                        <h4>${crop.cropName}</h4>
+                        <p><strong>Description:</strong> ${crop.description}</p>
+                        <p><strong>Region:</strong> ${crop.region}</p>
+                        <p><strong>Soil Type:</strong> ${crop.soilType}</p>
+                        <p><strong>Price per Kg:</strong> ${crop.price}</p>
+                    `;
+                    listingsContainer.appendChild(cropDiv);
+                });
+            }
+        };
+    </script>
+</body>
+</html>

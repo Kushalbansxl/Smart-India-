@@ -1,0 +1,115 @@
+/* Reset some basic styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.mainPage {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.titleContainer {
+    background: #4CAF50;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+.titleBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+}
+
+.line {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.requirementsButton, .viewListingsButton {
+    background-color: #ffffff;
+    color: #4CAF50;
+    border: 2px solid #4CAF50;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.requirementsButton:hover, .viewListingsButton:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    background: #f4f4f4;
+}
+
+.sectionHeading {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+}
+
+.requirementForm {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.formRow {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.formGroup {
+    flex: 1;
+    min-width: 200px;
+    margin-right: 20px;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.submitBtn {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submitBtn:hover {
+    background-color: #45a049;
+}
+
+.availableCrops {
+    margin-top: 20px;
+}
+
+.availableCrops h2 {
+    margin-bottom: 30px;
+    
+}
+
+.footer {
+    background: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: sticky;
+    bottom: 0;
+}

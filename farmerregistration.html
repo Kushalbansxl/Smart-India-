@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farmer Registration Form</title>
+    <link rel="stylesheet" href="Buyer.css" />
+    <link rel="stylesheet" href="chatbot.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="form-header">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/8/84/Government_of_India_logo.svg"
+          alt="Logo"
+        />
+        <h1>Farmer Registration Form</h1>
+      </div>
+      <form action="farmerlogin.html" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="fullName">Farmer Name:</label>
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            placeholder="Farmer Name:"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label>Verification Type:</label>
+          <select required>
+            <option value="">Please Select</option>
+            <option value="CBSE">Aadhar</option>
+            <option value="ICSE">Pan</option>
+            <option value="State Board">Driving Licence</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="">Kisaan Card ID</label>
+          <input type="text" placeholder="Verification No." />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input
+            type="text"
+            id="phone"
+            name="phone"
+            placeholder="Phone Number"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email Address"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="location">Location:</label>
+          <input
+            type="text"
+            id="location"
+            name="location"
+            placeholder="Location"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="pincode">Pincode:</label>
+          <input
+            type="text"
+            id="pincode"
+            name="pincode"
+            placeholder="Pincode"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="state">State:</label>
+          <input
+            type="text"
+            id="state"
+            name="state"
+            placeholder="State"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="address">Address:</label>
+          <input
+            type="text"
+            id="address"
+            name="address"
+            placeholder="Address"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password:</label>
+          <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            placeholder="Confirm Password"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="UploadFile"
+            >Upload Document (e.g., Aadhar , Pan , Driving Licence):</label
+          >
+          <input
+            type="file"
+            id="UploadFile"
+            name="UploadFile"
+            accept=".jpg, .jpeg, .png, .pdf, .doc, .docx"
+          />
+        </div>
+        <button type="submit" class="submit-btn">Register</button>
+      </form>
+      <div class="login">
+        <p>Already a member?</p>
+        <a href="farmerlogin.html">Login</a>
+      </div>
+    </div>
+    <!-- Popup chat window -->
+
+    <!-- chat open -->
+    <div class="chat-bar-open" id="chat-open">
+      <button
+        id="chat-open-button"
+        type="button"
+        class="collapsible close"
+        onclick="chatOpen()"
+      >
+        <img src="images/Sparrow Bird.png" alt="Sparrow Bird image" />
+      </button>
+    </div>
+
+    <!-- chat close -->
+    <div class="chat-bar-close" id="chat-close">
+      <button
+        id="chat-close-button"
+        type="button"
+        class="collapsible close"
+        onclick="chatClose()"
+      >
+        <i class="material-icons-outlined"> close </i>
+      </button>
+    </div>
+
+    <!-- chat-window 1 -->
+    <div class="chat-window" id="chat-window1">
+      <div class="hi-there">
+        <p class="p1">Hi There</p>
+        <br />
+        <p class="p2">Hello Ask Us Anythig,Share Your<br />Feedback.</p>
+      </div>
+      <div class="start-conversation">
+        <h1>Start a Conversation</h1>
+        <br />
+        <p>The team typically replies in few minutes.</p>
+        <button
+          class="new-conversation"
+          type="button"
+          onclick="openConversation()"
+        >
+          <span>New Conversation</span
+          ><i class="material-icons-outlined"> send </i>
+        </button>
+      </div>
+    </div>
+
+    <!-- chat chat-window 2 -->
+    <div class="chat-window2" id="chat-window2">
+      <div class="message-box" id="messageBox">
+        <div class="hi-there">
+          <p class="p1">नमस्ते, मैं आपकी क्या मदद कर सकता हूँ?</p>
+          <br />
+          <p class="p2">The team typically replies in few minutes.</p>
+        </div>
+        <div class="first-chat">
+          <p>Krishi Saarthi is on their way to win.</p>
+          <div class="arrow"></div>
+        </div>
+        <div class="second-chat">
+          <div class="circle"></div>
+          <p>Saarthi won the hackathon guys!</p>
+          </p>
+          <div class="arrow"></div>
+        </div>
+      </div>
+      <div class="input-box">
+        <div class="surveysparrow">
+          <img src="images/sparrow favicon.png" />
+          <p>we run on Krishi Saarthi</p>
+        </div>
+        <div class="write-reply">
+          <input
+            class="inputText"
+            type="text"
+            id="textInput"
+            placeholder="Write a reply..."
+          />
+        </div>
+        <div class="send-button">
+          <button
+            type="submit"
+            class="send-message"
+            id="send"
+            onclick="userResponse()"
+          >
+            <i class="material-icons-outlined"> send </i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="chatbot.js"></script>
+  </body>
+</html>

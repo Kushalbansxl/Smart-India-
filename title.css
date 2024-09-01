@@ -1,0 +1,43 @@
+.titleContainer{
+    width:100vw;
+    z-index: 20;
+    box-shadow: 10px 10px 40px black;
+    position: fixed;
+}
+.titleBar img {
+    width: 7vw;
+  
+}
+
+.titleBar {
+    border: 0px;
+    box-sizing: border-box;
+    background-color: white;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 17px;
+    color: rgb(181, 181, 181);
+    font-family: sans-serif;
+    font-weight: bold;
+    padding: 20px 30px 20px 30px;
+    
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    
+}
+.buttonTitle{
+    cursor: pointer;
+    height:40px;
+    background-color: none;
+    border: none;
+    background-color: rgb(74, 74, 74);
+    border:1px solid white;
+    border-radius: 20px;
+    padding: 10px 30px 10px 30px;
+    margin-left: 20px;
+    color: rgb(255, 255, 255);
+}
